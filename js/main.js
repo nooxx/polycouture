@@ -75,22 +75,3 @@ function initSliders() {
 }
 
 initSliders();
-
-/* ─── Contact form ─── */
-const form = document.getElementById('contactForm');
-if (form) {
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    const btn = form.querySelector('.btn-submit');
-    const orig = btn.textContent;
-    btn.textContent = 'Message envoyé ✓';
-    btn.disabled = true;
-    btn.style.background = '#235e55';
-    setTimeout(() => {
-      btn.textContent = orig;
-      btn.disabled = false;
-      btn.style.background = '';
-      form.reset();
-    }, 3500);
-  });
-}
